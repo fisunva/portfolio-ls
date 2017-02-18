@@ -1,84 +1,10 @@
-doctype html
-html(lang='ru-RU')
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
-        meta(http-equiv='X-UA-Compatible', content='ie=edge')
-        title Blog
-    body
-        .wrapper
-            .container
-                header.header
-                    .header_top
-                        .header_left
-                            ul.header-social_list
-                                li.header-social_item
-                                    a(href="#") Vk
-                                li.header-social_item
-                                    a(href="#") GitHub
-                                li.header-social_item
-                                    a(href="#") In
-                        .header_right
-                            svg(width='100', height='100')
-                                g#cross_svg
-                                    rect#Rectangle-1(x='0', y='0', width='48', height='2', fill='transparent', style='')
-                                    rect#Rectangle-2(x='0', y='14', width='48', height='2', fill='transparent', style='opacity: 1;')
-                                    rect#Rectangle-4(x='0', y='28', width='48', height='2', fill='transparent', style='')
-                    .header_bottom
-                        .user_photo
-                            img(src='#', alt='Фото')
-                        .header_title Блог
-                        .header_description Статьи которые я написал
-                section.blog
-                    aside.aside
-                        nav.nav
-                            ul.nav_list
-                                li.nav_item
-                                    a(href="#") Самое важное в SASS
-                                li.nav_item
-                                    a(href="#") Приемы в верстке без которых не обходится не один сайт
-                                li.nav_item
-                                    a(href="#") Самый необходимый набор GULP плагинов
-                                li.nav_item
-                                    a(href="#") Почему я выбрал JADE
-                    .blog_post
-                        ul.blog_post-list
-                            li.blog_post-item
-                                .blog_post-title Самое важное в SASS
-                                .blog_post-data 22 ноября 2016
-                                .blog_post-description Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-                            li.blog_post-item
-                                .blog_post-title Самое важное в SASS
-                                .blog_post-data 22 ноября 2016
-                                .blog_post-description Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.
-        footer.footer
-            .footer_left
-                .copyright_top Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool
-                .copyright_bottom Фисун Вадим Создано с любовью в LoftShool | 2016
-            .footer_center
-                .footer_center-top
-                    ul.menu_list
-                        li.menu_item
-                            a(href='#') Мои работы
-                        li.menu_item
-                            a(href='#') Обо мне
-                        li.menu_item
-                            a(href='#') Блог
-                .footer_center-bottom
-                    ul.social_list
-                        li.social_item
-                            a(href='#') Вконтакте
-                        li.social_item
-                            a(href='#') Гит хаб
-                        li.social_item
-                            a(href='#') Линкед
-            .footer_right
-                ul.contact-list
-                    li.contact-item
-                        a(href="#") skype_knd
-                    li.contact-item
-                        a(href="#") fisun_vadim@outlook.com
-                    li.contact-item
-                        a(href="#") +7 924 323 10 88
-                    li.contact-item
-                        a(href="#") Владивосток, ул. Светланская
+extends ../_template
+
+block title
+    title Blog
+
+block header
+    include ../common/header_blog
+
+block section
+    include ../common/section_blog

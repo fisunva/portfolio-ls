@@ -1,5 +1,24 @@
 body {
   margin: 0;
+  background-color: #efeee9;
 }
-
-@import 'common/greating';
+.wrapper{
+}
+.content{
+  width: 1800px;
+  margin: auto;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+@import 'common/header';
+@import 'common/font';
+@import 'common/section_blog';
+@import 'common/footer';
